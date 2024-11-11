@@ -1,0 +1,3 @@
+[submodule "src/sport_visuals_generator"]
+	path = src/sport_visuals_generator
+	url = https://github.com/tekbec/sport-visuals-generator.git
