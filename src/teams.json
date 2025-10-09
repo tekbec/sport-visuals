@@ -31,7 +31,7 @@
             "stl": {"city": "St. Louis",    "name": "Blues",          "color": [0  ,73 ,134,255], "logo": "https://assets.nhle.com/logos/nhl/svg/STL_dark.svg" , "scale": 1.00},      
             "tbl": {"city": "Tampa Bay",    "name": "Lightning",      "color": [0  ,32 ,91 ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/TBL_dark.svg" , "scale": 1.10},  
             "tor": {"city": "Toronto",      "name": "Maple Leafs",    "color": [0  ,32 ,91 ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/TOR_dark.svg" , "scale": 1.20},  
-            "uta": {"city": "Utah",         "name": "Hockey Club",    "color": [1  ,1  ,1  ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg" , "scale": 1.20},  
+            "uta": {"city": "Utah",         "name": "Mammoth",        "color": [108,172,228,255], "logo": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg" , "scale": 1.20},  
             "van": {"city": "Vancouver",    "name": "Canucks",        "color": [0  ,32 ,91 ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/VAN_dark.svg" , "scale": 1.10},    
             "vgk": {"city": "Vegas",        "name": "Golden Knights", "color": [185,151,91 ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/VGK_dark.svg" , "scale": 1.20}, 
             "wpg": {"city": "Winnipeg",     "name": "Jets",           "color": [4  ,30 ,66 ,255], "logo": "https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg" , "scale": 1.20},        
