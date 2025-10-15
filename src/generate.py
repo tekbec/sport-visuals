@@ -7,13 +7,9 @@ import os, json
 srcs_path = os.path.dirname(os.path.realpath(__file__))
 root_path = os.path.dirname(srcs_path)
 temp_path = os.path.join(root_path, 'tmp')
+publ_path = os.path.join(root_path, 'public')
 if not os.path.isdir(temp_path):
     os.mkdir(temp_path)
-
-# File paths
-thumbnail_file = os.path.join(temp_path, f'thumbnail.png')
-poster_file    = os.path.join(temp_path, f'poster.png'   )
-square_file    = os.path.join(temp_path, f'square.png'   )
 
 # Load leagues
 league_file = os.path.join(srcs_path, 'teams.json')
@@ -45,8 +41,13 @@ for league_id, league_info in leagues.items():
             team_2 = Team(team_2_info['city'], team_2_info['name'], team_2_abbr, tuple(team_2_info['color']), team_2_info['logo'].replace('{root}', root_path), team_2_info['scale'])
             if not team_2_abbr in visuals[league_id][team_1_abbr]: visuals[league_id][team_1_abbr][team_2_abbr] = {}
 
-            print(f'  > {team_1_abbr} vs {team_2_abbr}')
+            # File paths
+            thumbnail_file = os.path.join(publ_path, f'{league_id}_{team_1.abbr}_{team_2.abbr}_thumbnail.png')
+            poster_file    = os.path.join(publ_path, f'{league_id}_{team_1.abbr}_{team_2.abbr}_poster.png'   )
+            square_file    = os.path.join(publ_path, f'{league_id}_{team_1.abbr}_{team_2.abbr}_square.png'   )
 
+            print(f'  > {team_1_abbr} vs {team_2_abbr}')
+           
             if os.path.isfile(thumbnail_file): os.unlink(thumbnail_file)
             if os.path.isfile(poster_file):    os.unlink(poster_file)
             if os.path.isfile(square_file):    os.unlink(square_file)
@@ -70,8 +71,3 @@ for league_id, league_info in leagues.items():
                 visuals[league_id][team_1_abbr][team_2_abbr]['square']    = upload(square_file)
                 with open(visuals_file, 'w') as file:
                     json.dump(visuals, file, indent = 4)
-
-            # Clean temp files
-            if os.path.isfile(thumbnail_file): os.unlink(thumbnail_file)
-            if os.path.isfile(poster_file):    os.unlink(poster_file)
-            if os.path.isfile(square_file):    os.unlink(square_file)
